@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Prestamo;
+use App\Prestamos;
 
+// Facades
+use Auth;
 class prestamoController extends Controller
 {
     public function create()
@@ -15,16 +17,16 @@ class prestamoController extends Controller
 
     public function store(Request $request)
     {
-    	$prestamo = new Prestamo;        
+    	$prestamo = new Prestamos;        
 
         $prestamo->alumno = $request->alumnoPrestamo;
         $prestamo->libro_id = $request->libro_id;
-        $prestamo->admin_id = Auth::id();
-        $prestamo->timestamps();
+        $prestamo->admin_id = Auth::user()->id;
+        //$prestamo->timestamps();
 
         $prestamo->save(); 
 
-        return redirect('/admin/alta/prestamo');
+        return redirect('/admin/nuevoPrestamo');
     }
 
     public function edit($id)
