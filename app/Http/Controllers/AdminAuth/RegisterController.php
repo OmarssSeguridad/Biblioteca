@@ -66,11 +66,11 @@ class RegisterController extends Controller
         return Admin::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password'],
+            'password' => bcrypt($data['password']),
             'sexo' => $data['sexo'],
             'telefono' => $data['telefono'],
             'direccion' => $data['direccion'],
-            'localidad' => $data['localidad']),
+            'localidad' => $data['localidad'],
         ]);
     }
 
