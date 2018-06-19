@@ -18,6 +18,7 @@ class CreatePrestamosTable extends Migration
             $table->string('alumno');
             $table->string('libro_id');
             $table->string('admin_id');
+            $table->string('estado');
             $table->timestamps();
         });
     }

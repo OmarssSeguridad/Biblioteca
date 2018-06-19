@@ -10,16 +10,27 @@
 	                    <h4 class="title">Registrar un Prestamo</h4>
 	                </div>
 	                <div class="content">
-                        <form action="/admin/alta/prestamo" method="post" onsubmit="return confirm('¿La información que deseas registrar es correcta?');">
+	                	<form action="/admin/alta/prestamo" method="post" onsubmit="return confirm('¿La información que deseas registrar es correcta?');">
                         {{ csrf_field() }}
 							<fieldset>									   
 							    <div class="form-group">
-							      <label for="Alumno">Alumno</label>
-							      <input type="text" class="form-control" placeholder="100 años de soledad" name="alumnoPrestamo">
+							      <label for="alumnoPrestamo">Alumno</label>
+							      		<select name="alumnoPrestamo" id="alumnoPrestamo" class="form-control">
+ 											@foreach($alumnos as $alumno)
+   												<option value="{{$alumno->name}}"> {{ $alumno->name}} </option>
+ 											@endforeach
+										</select>
+
 							    </div>
 							    <div class="form-group">
 							      <label for="libro_id">ID Libro</label>
-							      <input type="text" class="form-control" placeholder="Gabriel García Marquez" name="libro_id">
+
+							      		<select name="libro_id" id="libro_id" class="form-control">
+ 											@foreach($libros as $libro)
+   												<option value="{{$libro->id}}"> {{$libro->name}} {{$libro->autor}} "{{$libro->edicion}} ". {{$libro->anio}} </option>
+ 											@endforeach
+										</select>
+
 							    </div>
 								<div class="form-group">
 							      <label for="admin">Admin</label>
