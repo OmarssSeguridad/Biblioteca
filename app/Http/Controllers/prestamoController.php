@@ -17,13 +17,13 @@ class prestamoController extends Controller
     	$prestamo = new Prestamo;        
 
         $prestamo->alumno = $request->alumnoPrestamo;
-        $prestamo->libro_id = $request->autorLibro;
+        $prestamo->libro_id = $request->libro_id;
         $prestamo->admin_id = Auth::id();
         $prestamo->timestamps();
 
         $prestamo->save(); 
 
-        return redirect('/admin/home');
+        return redirect('/admin/alta/prestamo');
     }
 
     public function edit($id)

@@ -19,7 +19,7 @@ class libroController extends Controller
         $libro->autor = $request->autorLibro;
         $libro->anio = $request->anioLibro;
         $libro->edicion = $request->edicionLibro;
-        $libro->num_existencias = $request->num_existenciasLibros;
+        $libro->numCopias = $request->numCopias; 
         $libro->timestamps();
 
 
