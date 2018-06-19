@@ -10,5 +10,17 @@ Route::get('/home', function () {
     return view('admin.home');
 })->name('home');
 
+//
+Route::get('/registrarAlumno','alumnoController@create')->name('registrarAlumno');
+Route::post('/registrarAlumno','alumnoController@store');
+
+//Registro de Libro
+Route::get('/registrarLibro','libroController@create')->name('registrarLibro');
+Route::post('/registrarLibro','libroController@store');
+
+//Registro de Prestamo
+Route::get('/registrarPrestamo','prestamoController@create')->name('registrarPrestamo');
+Route::post('/registrarPrestamo','prestamoController@store');
   
   Route::get('/dashboard', 'profileController@perfilAdministrador');
+
