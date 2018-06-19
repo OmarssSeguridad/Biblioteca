@@ -41,5 +41,9 @@ class libroController extends Controller
 
     public function destroy($id)
     {
-
-    }}
+    	$item = Libro::find($id);
+        $item->delete();
+        session()->flash('message','Updated Successfully');
+        return redirect('/admin/libros');
+    }
+}
