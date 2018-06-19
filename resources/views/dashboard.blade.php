@@ -336,8 +336,8 @@
                     <ul>
 
                         <li>
-                            <a href="http://www.creative-tim.com">
-                                Creative Tim
+                            <a href="http://www.Equipo.com">
+                                Equipo Dinamita
                             </a>
                         </li>
                         <li>
@@ -353,7 +353,7 @@
                     </ul>
                 </nav>
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.Equipo.com">Equipo Dinamita</a>
                 </div>
             </div>
         </footer>

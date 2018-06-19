@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Libros;
 
 class libroController extends Controller
 {
@@ -13,19 +14,19 @@ class libroController extends Controller
 
     public function store(Request $request)
     {
-    	$libro = new libro;        
+    	$libro = new Libros;        
 
         $libro->name = $request->nombreLibro;
         $libro->autor = $request->autorLibro;
         $libro->anio = $request->anioLibro;
         $libro->edicion = $request->edicionLibro;
-        $libro->numCopias = $request->numCopias; 
-        $libro->timestamps();
+        $libro->numCopias = $request->numCopias;
+       // $libro->timestamps();
 
 
         $libro->save(); 
 
-        return redirect('/admin/home');
+        return redirect('/admin/alta/libro');
     }
 
     public function edit($id)
@@ -36,10 +37,14 @@ class libroController extends Controller
 
     public function update(Request $request,$id)
     {
-    	
+
     }
 
     public function destroy($id)
     {
-
-    }}
+    	$item = Libro::find($id);
+        $item->delete();
+        session()->flash('message','Updated Successfully');
+        return redirect('/admin/libros');
+    }
+}
