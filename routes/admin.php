@@ -13,14 +13,25 @@ Route::get('/home', function () {
 
   //Crear alumno
   Route::get('/alta/alumno', 'alumnoController@create');
-
+  Route::post('/alta/alumno', 'alumnoController@store');
 
   //Crear administrador
   Route::get('/alta/administrador', 'adminController@create');
+  Route::post('/alta/administrador', 'adminController@store');
+
 
   //Crear libro
   Route::get('/alta/libro', 'libroController@create');
   Route::post('/alta/libro', 'libroController@store');
+
+  //Eliminar Libro
+  Route::delete('baja/libro/{id}','libroController@destroy');
+  //Eliminar Administradores
+  Route::delete('baja/admin/{id}','adminController@destroy');
+    //Eliminar Alumnos
+  Route::delete('baja/alumno/{id}','alumnoController@destroy');
+  
+
 
   //Prestamo
   //Route::get('/nuevoPrestamo', '');
