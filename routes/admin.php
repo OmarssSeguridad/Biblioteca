@@ -21,7 +21,7 @@ Route::get('/dashboard', 'profileController@perfilAdministrador');
 
   //Crear libro
   Route::get('/alta/libro', 'libroController@create');
-  //Route::post('/alta/libro', '');
+  Route::post('/alta/libro', 'libroController@store');
 
   //Prestamo
   //Route::get('/nuevoPrestamo', '');

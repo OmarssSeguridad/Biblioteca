@@ -10,7 +10,8 @@
 	                    <h4 class="title">Registrar un Libro</h4>
 	                </div>
 	                <div class="content">
-                        <form>
+                        <form action="/admin/alta/libro" method="post" onsubmit="return confirm('¿La información que deseas registrar es correcta?');">
+                        {{ csrf_field() }}
 							<fieldset>									   
 							    <div class="form-group">
 							      <label for="nombre del libro">Nombre del Libro</label>
