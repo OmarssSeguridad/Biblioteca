@@ -12,3 +12,14 @@ Route::get('/home', function () {
 
   
   Route::get('/dashboard', 'profileController@perfilAdministrador');
+  //Crear alumno
+  Route::get('/alta/alumno', '');
+  Route::post('/alta/alumno', '');
+
+  //Crear administrador
+  Route::get('/alta/administrador', '');
+  Route::post('/alta/administrador', '');
+
+  //Crear libro
+  Route::get('/alta/libro', '');
+  Route::post('/alta/libro', '');

@@ -51,51 +51,45 @@
 
             <ul class="nav">
                 <li>
-                    <a href="">
+                    <a href="{{ url('/admin/dashboard') }}">
                         <i class="ti-panel"></i>
-                        <p></p>
+                        <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="{{ url('/admin/alta/libro') }}">
+                        <i class="ti-bookmark"></i>
+                        <p>alta de libro</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/admin/alta/alumno') }}">
                         <i class="ti-user"></i>
-                        <p>User Profile</p>
+                        <p>Alta de alumno</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="typography.html">
+                    <a href="{{ url('/admin/alta/administrador') }}">
                         <i class="ti-text"></i>
-                        <p>Typography</p>
+                        <p>Alta de administrador</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
-                        <i class="ti-pencil-alt2"></i>
-                        <p>Icons</p>
+                    <a href="{{ url('/admin/prestamos') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Prestamos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="maps.html">
-                        <i class="ti-map"></i>
-                        <p>Maps</p>
+                    <a href="{{ url('/admin/libros') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Libros</p>
                     </a>
                 </li>
                 <li>
-                    <a href="notifications.html">
-                        <i class="ti-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-				<li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="ti-export"></i>
-                        <p>Upgrade to PRO</p>
+                    <a href="{{ url('/admin/usuarios') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Usuarios</p>
                     </a>
                 </li>
             </ul>
