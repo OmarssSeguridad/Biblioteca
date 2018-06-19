@@ -10,7 +10,7 @@ Route::get('/home', function () {
     return view('admin.home');
 })->name('home');
 
-//Registro de Alumno
+//
 Route::get('/registrarAlumno','alumnoController@create')->name('registrarAlumno');
 Route::post('/registrarAlumno','alumnoController@store');
 
@@ -21,3 +21,6 @@ Route::post('/registrarLibro','libroController@store');
 //Registro de Prestamo
 Route::get('/registrarPrestamo','prestamoController@create')->name('registrarPrestamo');
 Route::post('/registrarPrestamo','prestamoController@store');
+  
+  Route::get('/dashboard', 'profileController@perfilAdministrador');
+

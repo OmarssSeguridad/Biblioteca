@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin'], function () {
   Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
   Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
 });
+
 //Rutas de Alumno
 Route::group(['prefix' => 'alumno'], function () {
   Route::get('/login', 'AlumnoAuth\LoginController@showLoginForm')->name('login');
@@ -41,4 +42,21 @@ Route::group(['prefix' => 'alumno'], function () {
   Route::post('/password/reset', 'AlumnoAuth\ResetPasswordController@reset')->name('password.email');
   Route::get('/password/reset', 'AlumnoAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
   Route::get('/password/reset/{token}', 'AlumnoAuth\ResetPasswordController@showResetForm');
+});
+
+/*Contenido del templete*/
+/*Route::get('dashboard', function() {
+   return view('dashboard');
+});*/
+Route::get('icons',function(){
+  return view('icons');
+});
+Route::get('typography', function() {
+    return view('typography');
+});
+Route::get('notifications', function() {
+    return view('notifications');
+});
+Route::get('template', function() {
+    return view('template');
 });
