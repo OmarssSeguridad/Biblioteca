@@ -8,7 +8,7 @@ class adminController extends Controller
 {
     public function create()
     {
-
+        return view('/admin/registrarAdmin'); 
     }
 
     public function store(Request $request)

@@ -116,33 +116,29 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
-								<p>Stats</p>
-                            </a>
-                        </li>
+                        
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="ti-bell"></i>
-                                    <p class="notification">5</p>
-									<p>Notifications</p>
+                                    <i class="ti-settings"></i>
+                                    <p class="notification">{{Auth::user()->name}}</p>
+									<p></p>
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
+                                <li>
+                                    <a href="{{ url('/admin/logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
                               </ul>
                         </li>
-						<li>
-                            <a href="#">
-								<i class="ti-settings"></i>
-								<p>Settings</p>
-                            </a>
-                        </li>
+						
                     </ul>
 
                 </div>
@@ -154,27 +150,10 @@
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
-                    <ul>
-
-                        <li>
-                            <a href="http://www.creative-tim.com">
-                                Creative Tim
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://blog.creative-tim.com">
-                               Blog
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://www.creative-tim.com/license">
-                                Licenses
-                            </a>
-                        </li>
-                    </ul>
+                    
                 </nav>
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script>, hecho con <i class="fa fa-heart heart"></i> 
                 </div>
             </div>
         </footer>

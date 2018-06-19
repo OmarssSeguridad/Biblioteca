@@ -7,17 +7,16 @@ Route::get('/home', function () {
 
     //dd($users);
 
-    return view('admin.home');
+    return view('admin.dashboard');
 })->name('home');
-Route::get('/dashboard', 'profileController@perfilAdministrador');
+  Route::get('/dashboard', 'profileController@perfilAdministrador');
 
   //Crear alumno
-  //Route::get('/alta/alumno', '');
-  //Route::post('/alta/alumno', '');
+  Route::get('/alta/alumno', 'alumnoController@create');
+
 
   //Crear administrador
-  //Route::get('/alta/administrador', '');
-  //Route::post('/alta/administrador', '');
+  Route::get('/alta/administrador', 'adminController@create');
 
   //Crear libro
   Route::get('/alta/libro', 'libroController@create');
