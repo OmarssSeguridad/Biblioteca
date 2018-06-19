@@ -8,14 +8,14 @@ class Prestamos extends Model
 {
     public function libro()
     {
-        return $this->hasMany(Libros::class);
+        return $this->belongsTo(Libros::class);
     }
     public function alumno()
     {
-        return $this->belongsTo(Alumno::class);
+        return $this->hasMany(Alumno::class);
     }
     public function admin()
     {
-        return $this->belongsTo(Admin::class);
+        return $this->hasMany(Admin::class);
     }
 }

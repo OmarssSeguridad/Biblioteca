@@ -41,14 +41,14 @@ class Admin extends Authenticatable
 
     public function libro()
     {
-        return $this->hasMany(Libros::class);
+        return $this->belongsTo(Libros::class);
     }
-    public function alumno()
+    public function alumnos()
     {
-        return $this->hasMany(Alumno::class);
+        return $this->belongsTo(Alumno::class);
     }
     public function prestamo()
     {
-        return $this->hasMany(Prestamos::class);
+        return $this->belongsTo(Prestamos::class);
     }
 }

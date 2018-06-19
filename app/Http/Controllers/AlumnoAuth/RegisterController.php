@@ -66,7 +66,10 @@ class RegisterController extends Controller
         return Alumno::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => bcrypt($data['password'],
+            'sexo' => $data['sexo'],
+            'direccion' => $data['direccion'],
+            'localidad' => $data['localidad']),
         ]);
     }
 

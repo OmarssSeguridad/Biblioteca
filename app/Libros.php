@@ -8,7 +8,7 @@ class Libros extends Model
 {
     public function admin()
     {
-        return $this->belongsTo(Admin::class);
+        return $this->hasMany(Admin::class);
     }
     public function prestamo()
     {
