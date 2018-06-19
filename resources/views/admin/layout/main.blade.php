@@ -70,7 +70,7 @@
                 </li>
                 <li>
                     <a href="{{ url('/admin/alta/administrador') }}">
-                        <i class="ti-text"></i>
+                        <i class="ti-user"></i>
                         <p>Alta de administrador</p>
                     </a>
                 </li>
@@ -190,16 +190,39 @@
 
             demo.initChartist();
 
-            $.notify({
+            /*$.notify({
                 icon: 'ti-gift',
                 message: "Welcome to <b>Paper Dashboard</b> - a beautiful Bootstrap freebie for your next project."
 
             },{
                 type: 'success',
                 timer: 4000
-            });
+            });*/
 
         });
+        @foreach (['danger', 'warning', 'success', 'info'] as $key)
+            @if(Session::has($key))
+                $.notify({
+                    icon: @switch($key)
+                        @case('danger')
+                            'error'
+                            @break
+                        @case('warning')
+                            'warning'
+                            @break
+                        @case('success')
+                            'done'
+                            @break
+                        @default
+                            'notifications'
+                    @endswitch
+                    ,
+                    message: '{{ Session::get($key) }}'
+                },{
+                    type: '{{ $key }}'
+                });
+            @endif
+        @endforeach
     </script>
 
 </html>
