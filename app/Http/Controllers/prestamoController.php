@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Prestamo;
 
 class prestamoController extends Controller
 {
@@ -38,6 +39,9 @@ class prestamoController extends Controller
 
     public function destroy($id)
     {
-
+        $item = Prestamo::find($id);
+        $item->delete();
+        session()->flash('message','Updated Successfully');
+        return redirect('/admin/libros');
     }
 }
