@@ -11,7 +11,8 @@ class profileController extends Controller
     public function perfilAdministrador()
     {
         $admin = Admin::find(Auth::id());        
-
-        return view('admin.dashboard',compact('admin'));
+        $datos = Auth::id();
+        return view('admin.dashboard',compact('admin','datos'));
     }
+
 }
