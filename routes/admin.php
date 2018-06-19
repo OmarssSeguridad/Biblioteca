@@ -20,7 +20,7 @@ Route::get('/home', function () {
 
   //Crear libro
   Route::get('/alta/libro', 'libroController@create');
-  //Route::post('/alta/libro', '');
+  Route::post('/alta/libro', 'libroController@store');
 
   //Prestamo
   //Route::get('/nuevoPrestamo', '');
