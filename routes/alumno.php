@@ -10,3 +10,4 @@ Route::get('/home', function () {
     return view('alumno.home');
 })->name('home');
 
+
