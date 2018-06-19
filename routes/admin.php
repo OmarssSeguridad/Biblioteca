@@ -24,8 +24,8 @@ Route::get('/home', function () {
   Route::post('/alta/libro', 'libroController@store');
 
   //Crear Prestamo
-  Route::get('/nuevoPrestamo', 'prestamoController@create');
-  Route::post('/nuevoPrestamo','prestamoController@store');
+  Route::get('/alta/prestamo', 'prestamoController@create');
+  Route::post('/alta/prestamo','prestamoController@store');
 
   //Eliminar Libro
   Route::delete('baja/libro/{id}','libroController@destroy');

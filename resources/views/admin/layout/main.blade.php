@@ -75,7 +75,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('/admin/nuevoPrestamo') }}">
+                    <a href="{{ url('/admin/alta/prestamo') }}">
                         <i class="ti-view-list-alt"></i>
                         <p>Nuevo prestamo</p>
                     </a>

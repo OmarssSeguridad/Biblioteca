@@ -26,7 +26,7 @@ class prestamoController extends Controller
 
         $prestamo->save(); 
 
-        return redirect('/admin/nuevoPrestamo');
+        return redirect('/admin/alta/prestamo');
     }
 
     public function edit($id)

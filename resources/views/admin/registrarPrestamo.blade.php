@@ -10,7 +10,7 @@
 	                    <h4 class="title">Registrar un Prestamo</h4>
 	                </div>
 	                <div class="content">
-                        <form action="/admin/nuevoPrestamo" method="post" onsubmit="return confirm('¿La información que deseas registrar es correcta?');">
+                        <form action="/admin/alta/prestamo" method="post" onsubmit="return confirm('¿La información que deseas registrar es correcta?');">
                         {{ csrf_field() }}
 							<fieldset>									   
 							    <div class="form-group">
