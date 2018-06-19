@@ -7,14 +7,14 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Registrar Administrador</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/register') }}">
+                    <form class="form-horizontal" role="form" method="post" action="/admin/alta/administrador" onsubmit="return confirm('¿La información que deseas registrar es correcta?');">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Nombre</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
+                                <input id="name" type="text" class="form-control" name="nombreAdmin" value="{{ old('name') }}" autofocus>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
@@ -27,7 +27,7 @@
                             <label for="sexo" class="col-md-4 control-label">Sexo</label>
 
                             <div class="col-md-6">
-                                <select name="sexo">
+                                <select name="sexoAdmin">
                                     <option value="0">Masculino</option>
                                     <option value="1">Femenino</option>
                                 </select>
@@ -43,7 +43,7 @@
                             <label for="teléfono" class="col-md-4 control-label">Teléfono</label>
 
                             <div class="col-md-6">
-                                <input id="tel" type="number" class="form-control" name="telefono" value="{{ old('telefono') }}" autofocus>
+                                <input id="tel" type="number" class="form-control" name="telefonoAdmin" value="{{ old('telefono') }}" autofocus>
 
                                 @if ($errors->has('telefono'))
                                     <span class="help-block">
@@ -56,7 +56,7 @@
                             <label for="direccion" class="col-md-4 control-label">Dirección</label>
 
                             <div class="col-md-6">
-                                <input id="tel" type="text" class="form-control" name="direccion" value="{{ old('telefono') }}" autofocus>
+                                <input id="tel" type="text" class="form-control" name="direccionAdmin" value="{{ old('telefono') }}" autofocus>
 
                                 @if ($errors->has('direccion'))
                                     <span class="help-block">
@@ -69,7 +69,7 @@
                             <label for="localidad" class="col-md-4 control-label">Localidad</label>
 
                             <div class="col-md-6">
-                                <input id="localidad" type="text" class="form-control" name="localidad" value="{{ old('telefono') }}" autofocus>
+                                <input id="localidad" type="text" class="form-control" name="localidadAdmin" value="{{ old('telefono') }}" autofocus>
 
                                 @if ($errors->has('localidad'))
                                     <span class="help-block">
@@ -83,7 +83,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <input id="email" type="email" class="form-control" name="emailAdmin" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -97,7 +97,7 @@
                             <label for="password" class="col-md-4 control-label">Password</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control" name="passwordAdmin">
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
