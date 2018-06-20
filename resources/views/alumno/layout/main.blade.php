@@ -51,53 +51,19 @@
 
             <ul class="nav">
                 <li>
-                    <a href="{{ url('/admin/dashboard') }}">
+                    <a href="{{ url('/alumno/dashboard') }}">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
+                
                 <li>
-                    <a href="{{ url('/admin/alta/libro') }}">
-                        <i class="ti-bookmark"></i>
-                        <p>alta de libro</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('/admin/alta/alumno') }}">
-                        <i class="ti-user"></i>
-                        <p>Alta de alumno</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('/admin/alta/administrador') }}">
-                        <i class="ti-user"></i>
-                        <p>Alta de administrador</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('/admin/alta/prestamo') }}">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Nuevo prestamo</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('/admin/prestamos') }}">
+                    <a href="{{ url('/alumno/prestamos') }}">
                         <i class="ti-view-list-alt"></i>
                         <p>Prestamos</p>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ url('/admin/libros') }}">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Libros</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url('/admin/usuarios') }}">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Usuarios</p>
-                    </a>
-                </li>
+                
             </ul>
     	</div>
     </div>
@@ -126,13 +92,13 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{ url('/admin/logout') }}"
+                                    <a href="{{ url('/alumno/logout') }}"
                                         onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                         Logout
                                     </a>
 
-                                    <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ url('/alumno/logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
