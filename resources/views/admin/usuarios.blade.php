@@ -17,6 +17,7 @@
                                         <th>Sexo</th>
                                         <th>Teléfono</th>
                                         <th>Dirección</th>
+                                        <th>Tipo de Usario</th>
                                     </thead>
                                     @foreach ($Usuarios as $Usuarios) 
                                         <tbody>
@@ -26,6 +27,36 @@
                                             <td> {{ $Usuarios->sexo }} </td>
                                             <td> {{ $Usuarios->telefono }} </td>
                                             <td> {{ $Usuarios->direccion }} </td>
+                                            <td>{{ $Usuarios->tipoUsuario }}</td>
+                                           
+                                            <td> 
+                                                <form action=""post">                          
+                                                    {{csrf_field()}}
+                                                    {{method_field('PUT')}}
+                                                <button type="submit"><i class="fa fa-edit"></i></button> 
+                                                </form>
+                                            </td>
+
+                                             @if ($Usuarios->tipoUsuario === 0)
+                                                <td> 
+                                                    <form action="{{'baja/admin/'.$Usuarios->id}}" method="post">    
+                                                        {{csrf_field()}}
+                                                        {{ method_field('DELETE') }}
+
+                                                        <button type="submit"><i class="fa fa-trash"></i> </button> 
+                                                    </form> 
+                                                </td>
+                                            @else
+                                                <td> 
+                                                    <form action="{{'baja/alumno/'.$Usuarios->id}}" method="post">    
+                                                        {{csrf_field()}}
+                                                        {{ method_field('DELETE') }}
+
+                                                        <button type="submit"><i class="fa fa-trash"></i> </button> 
+                                                    </form> 
+                                                </td>
+                                            @endif
+                                            
                                         </tbody>
                                     @endforeach                              
                                     

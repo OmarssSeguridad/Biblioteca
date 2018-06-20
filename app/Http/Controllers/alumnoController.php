@@ -49,6 +49,9 @@ class alumnoController extends Controller
 
     public function destroy($id)
     {
-
+        $alumno = Alumno::find($id);
+        $alumno->delete();
+        session()->flash('message','Updated Successfully');
+        return redirect('/admin/usuarios');
     }
 }
