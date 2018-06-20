@@ -74,7 +74,7 @@ class prestamoController extends Controller
         $item = Prestamo::find($id);
         $item->delete();
         session()->flash('message','Updated Successfully');
-        return redirect('/admin/libros');
+        return redirect('/admin/prestamos');
     }
 
 
