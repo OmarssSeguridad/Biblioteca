@@ -27,7 +27,7 @@
 
 							      		<select name="libro_id" id="libro_id" class="form-control">
  											@foreach($libros as $libro)
-   												<option value="{{$libro->id}}"> {{$libro->name}} {{$libro->autor}} "{{$libro->edicion}} ". {{$libro->anio}} </option>
+   												<option value="{{$libro->id}}"> "{{$libro->name}}" - {{$libro->autor}}  </option>
  											@endforeach
 										</select>
 

@@ -31,7 +31,7 @@
 							    </div>
 							    <div class="form-group">
 							      <label for="año">Número de copias</label>
-							      <input type="number" class="form-control" placeholder="1967" name="numCopias">
+							      <input type="number" class="form-control" placeholder="10" name="numCopias">
 							    </div>
 							</fieldset>
 						    <button type="submit" class="btn btn-primary">Guardar</button>

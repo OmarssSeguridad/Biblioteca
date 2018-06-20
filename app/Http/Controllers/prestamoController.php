@@ -33,7 +33,7 @@ class prestamoController extends Controller
         $prestamo->alumno = $request->alumnoPrestamo;
         $prestamo->libro_id = $request->libro_id;
         $prestamo->admin_id = Auth::user()->id;
-        $prestamo->estado='P';
+        $prestamo->estado='Activo';
         //$prestamo->timestamps();
         $prestamo->save(); 
 

@@ -24,13 +24,13 @@
                                             <td> {{ $prestamos->libro_id }} </td>
                                             <td> {{ $prestamos->admin_id }} </td>
                                             <td> {{ $prestamos->estado }} </td>
-                                            <td> 
+                                            <!--<td> 
                                                 <form action=""post">                          
                                                     {{csrf_field()}}
                                                     {{method_field('PUT')}}
                                                 <button type="submit"><i class="fa fa-edit"></i></button> 
                                                 </form>
-                                            </td>
+                                            </td>-->
 
                                             <td> 
                                                 <form action="" method="post">    
