@@ -45,7 +45,10 @@ class adminController extends Controller
 
     public function destroy($id)
     {
-
+        $admin = Admin::find($id);
+        $admin->delete();
+        session()->flash('message','Updated Successfully');
+        return redirect('/admin/usuarios');
     }
 
 }

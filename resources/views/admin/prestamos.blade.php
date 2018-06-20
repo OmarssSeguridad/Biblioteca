@@ -24,6 +24,22 @@
                                             <td> {{ $prestamos->libro_id }} </td>
                                             <td> {{ $prestamos->admin_id }} </td>
                                             <td> {{ $prestamos->estado }} </td>
+                                            <td> 
+                                                <form action=""post">                          
+                                                    {{csrf_field()}}
+                                                    {{method_field('PUT')}}
+                                                <button type="submit"><i class="fa fa-edit"></i></button> 
+                                                </form>
+                                            </td>
+
+                                            <td> 
+                                                <form action="" method="post">    
+                                                    {{csrf_field()}}
+                                                    {{ method_field('DELETE') }}
+
+                                                <button type="submit"><i class="fa fa-trash"></i> </button> 
+                                                </form> 
+                                            </td>
                                         </tbody>
                                     @endforeach                              
                                     

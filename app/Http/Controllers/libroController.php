@@ -44,7 +44,7 @@ class libroController extends Controller
 
     public function edit($id)
     {
-    	$item = Libro::find($id);
+    	$item = Libros::find($id);
         return view('admin.editLibro',compact('item'));
     }
 
@@ -55,9 +55,11 @@ class libroController extends Controller
 
     public function destroy($id)
     {
-    	$item = Libro::find($id);
-        $item->delete();
+
+    	$libros = Libros::find($id);
+        $libros->delete();
         session()->flash('message','Updated Successfully');
         return redirect('/admin/libros');
+        
     }
 }

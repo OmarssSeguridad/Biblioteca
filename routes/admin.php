@@ -28,11 +28,11 @@ Route::get('/home', function () {
   Route::post('/alta/prestamo','prestamoController@store');
 
   //Eliminar Libro
-  Route::delete('/baja/libro/{id}','libroController@destroy');
+  //Route::delete('/baja/libro/{id}','libroController@destroy');
   //Eliminar Administradores
-  Route::delete('/baja/admin/{id}','adminController@destroy');
-    //Eliminar Alumnos
-  Route::delete('/baja/alumno/{id}','alumnoController@destroy');
+  //Route::delete('/baja/admin/{id}','adminController@destroy');
+  //Eliminar Alumnos
+  //Route::delete('/baja/alumno/{id}','alumnoController@destroy');
 
   //
   Route::get('/prestamos','prestamoController@indexAdmin');

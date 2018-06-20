@@ -21,6 +21,7 @@ class CreateAlumnosTable extends Migration
             $table->string('telefono');
             $table->string('direccion');
             $table->string('localidad');
+            $table->integer('tipoUsuario');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -26,6 +26,22 @@
                                             <td> {{ $prestamo->admin_id }} </td>
                                             <td> {{ $prestamo->estado }} </td>
                                             <td> {{ $prestamo->created_at}} </td>
+                                            <td> 
+                                                <form action=""post">                          
+                                                    {{csrf_field()}}
+                                                    {{method_field('PUT')}}
+                                                <button type="submit"><i class="fa fa-edit"></i></button> 
+                                                </form>
+                                            </td>
+
+                                            <td> 
+                                                <form action="" method="post">    
+                                                    {{csrf_field()}}
+                                                    {{ method_field('DELETE') }}
+
+                                                <button type="submit"><i class="fa fa-trash"></i> </button> 
+                                                </form> 
+                                            </td>
                                         </tbody>
                                     @endforeach                              
                                     
