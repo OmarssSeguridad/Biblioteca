@@ -27,8 +27,6 @@ class alumnoController extends Controller
             'email' => 'requiered|unique:alumno',
         ]);
        // $alumno->timestamps();
-
-
         $alumno->save(); 
 
         return redirect('/admin/alta/administrador');

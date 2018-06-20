@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Prestamos;
 use App\Alumno;
-use App\libros;
+use App\Libros;
 use Illuminate\Support\Facades\DB;
 
 
@@ -47,6 +47,17 @@ class prestamoController extends Controller
     {
 
         return view('admin/alta/prestamo' ,compact('alumnos'));
+    }
+
+    public function index()
+    {
+        $prestamo = collect(Alumno::find(Auth::id()));
+        return view('alumno.prestamos',compact('prestamo'));
+    }
+    public function indexAdmin()
+    {
+        $prestamo = collect(Alumno::find(Auth::id()));
+        return view('admin.prestamos',compact('prestamo'));
     }
     public function edit($id)
     {

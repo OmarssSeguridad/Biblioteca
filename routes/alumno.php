@@ -7,8 +7,11 @@ Route::get('/home', function () {
 
     //dd($users);
 
-    return view('alumno.home');
+    return view('alumno.dashboard');
 })->name('home');
+
+  Route::get('/dashboard', 'profileController@perfilAlumno');
+Route::get('/prestamos','prestamoController@index');
 
 //Registro de Prestamo
 Route::get('/registrarPrestamo','prestamoController@create')->name('registrarPrestamo');
