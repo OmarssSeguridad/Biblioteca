@@ -50,12 +50,12 @@
             </div>
 
             <ul class="nav">
-                <li>
+                <!--<li>
                     <a href="{{ url('/admin/dashboard') }}">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
-                </li>
+                </li>-->
                 <li>
                     <a href="{{ url('/admin/alta/libro') }}">
                         <i class="ti-bookmark"></i>

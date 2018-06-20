@@ -51,9 +51,9 @@
 
             <ul class="nav">
                 <li>
-                    <a href="{{ url('/alumno/dashboard') }}">
+                    <a href="{{ url('/alumno/libros') }}">
                         <i class="ti-panel"></i>
-                        <p>Dashboard</p>
+                        <p>Libros</p>
                     </a>
                 </li>
                 

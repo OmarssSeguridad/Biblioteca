@@ -12,13 +12,15 @@ use Illuminate\Support\Facades\DB;
 // Facades
 use Auth;
 class prestamoController extends Controller
-{
+{ 
+    public function indexForAlumno(){
+        $prestamo = DB::table('prestamos')->where('alumno',Auth::user()->name)->get();
+        return view('alumno.prestamos',compact('prestamo'));
+    }
     public function create()
     {
         $alumnos =  Alumno::all();
-        $libros= DB::table('libros')
-        ->where('numCopias', '>', 0)
-        ->get();
+        $libros= DB::table('libros')->get();
         ;
         return view('/admin/registrarPrestamo', compact('alumnos','libros'));  
 
@@ -56,8 +58,8 @@ class prestamoController extends Controller
     }
     public function indexAdmin()
     {
-        $prestamo = collect(Alumno::find(Auth::id()));
-        return view('admin.prestamos',compact('prestamo'));
+        $prestamos = DB::table('prestamos')->get();
+        return view('admin.prestamos',compact('prestamos'));
     }
     public function edit($id)
     {

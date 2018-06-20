@@ -5,7 +5,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Prestamos</h4>
+                                <h4 class="title">Préstamos</h4>
                             </div>
                             
                             <div class="content table-responsive table-full-width">
@@ -16,6 +16,7 @@
                                         <th>Libro</th>
                                         <th>Administrador</th>
                                     	<th>Estado</th>
+                                        <th>Fecha de préstamo</th>
                                     </thead>
                                     @foreach ($prestamo as $prestamo) 
                                         <tbody>
@@ -24,6 +25,7 @@
                                             <td> {{ $prestamo->libro_id }} </td>
                                             <td> {{ $prestamo->admin_id }} </td>
                                             <td> {{ $prestamo->estado }} </td>
+                                            <td> {{ $prestamo->created_at}} </td>
                                         </tbody>
                                     @endforeach                              
                                     

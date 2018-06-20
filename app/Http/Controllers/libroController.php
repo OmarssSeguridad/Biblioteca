@@ -5,8 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Libros;
 
+use Illuminate\Support\Facades\DB;
+
 class libroController extends Controller
 {
+    public function indexAdmin(){
+        //$libros = Libros::all();
+        $libros = DB::table('libros')->get();
+        //return $libros;
+        return view('admin.libros', compact('libros'));
+    }
+    public function index(){
+        $libros = DB::table('libros')->get();
+        //return $libros;
+        return view('alumno.libros', compact('libros'));
+    }
     public function create()
     {
     	return view('/admin/registrarLibro');  

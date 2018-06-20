@@ -7,6 +7,10 @@ use App\Alumno;
 
 class alumnoController extends Controller
 {
+    public function indexForAdmin(){
+        $Usuarios = Alumno::all();
+        return view('admin.usuarios',compact('Usuarios'));
+    }
     public function create()
     {
         return view('/admin/registrarAlumno'); 

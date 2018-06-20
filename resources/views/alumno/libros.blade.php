@@ -1,29 +1,31 @@
-@extends('admin.layout.main')
+@extends('alumno.layout.main')
 @section('content')
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Prestamos</h4>
+                                <h4 class="title">Libros</h4>
                             </div>
                             
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">
                                     <thead>
-                                        <th>ID</th>
-                                        <th>Alumno</th>
+                                        <th>ID</th>                                        
                                         <th>Libro</th>
-                                        <th>Administrador</th>
-                                    	<th>Estado</th>
+                                        <th>Autor</th>
+                                        <th>Año</th>
+                                        <th>Edición</th>
+                                        <th>Número de copias</th>
                                     </thead>
-                                    @foreach ($prestamos as $prestamos) 
+                                    @foreach ($libros as $libros) 
                                         <tbody>
-                                            <td> {{ $prestamos->id }} </td>
-                                            <td> {{ $prestamos->alumno }}</td>
-                                            <td> {{ $prestamos->libro_id }} </td>
-                                            <td> {{ $prestamos->admin_id }} </td>
-                                            <td> {{ $prestamos->estado }} </td>
+                                            <td> {{ $libros->id }} </td>
+                                            <td> {{ $libros->name }}</td>
+                                            <td> {{ $libros->autor }} </td>
+                                            <td> {{ $libros->anio }} </td>
+                                            <td> {{ $libros->edicion }} </td>
+                                            <td> {{ $libros->numCopias }} </td>
                                         </tbody>
                                     @endforeach                              
                                     

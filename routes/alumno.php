@@ -11,7 +11,8 @@ Route::get('/home', function () {
 })->name('home');
 
   Route::get('/dashboard', 'profileController@perfilAlumno');
-Route::get('/prestamos','prestamoController@index');
+Route::get('/prestamos','prestamoController@indexForAlumno');
+Route::get('/libros','libroController@index');
 
 //Registro de Prestamo
 Route::get('/registrarPrestamo','prestamoController@create')->name('registrarPrestamo');

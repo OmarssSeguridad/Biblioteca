@@ -5,25 +5,27 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Prestamos</h4>
+                                <h4 class="title">Usuarios</h4>
                             </div>
                             
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">
                                     <thead>
-                                        <th>ID</th>
-                                        <th>Alumno</th>
-                                        <th>Libro</th>
-                                        <th>Administrador</th>
-                                    	<th>Estado</th>
+                                        <th>ID</th>                                        
+                                        <th>Nombre</th>
+                                        <th>Email</th>
+                                        <th>Sexo</th>
+                                        <th>Teléfono</th>
+                                        <th>Dirección</th>
                                     </thead>
-                                    @foreach ($prestamos as $prestamos) 
+                                    @foreach ($Usuarios as $Usuarios) 
                                         <tbody>
-                                            <td> {{ $prestamos->id }} </td>
-                                            <td> {{ $prestamos->alumno }}</td>
-                                            <td> {{ $prestamos->libro_id }} </td>
-                                            <td> {{ $prestamos->admin_id }} </td>
-                                            <td> {{ $prestamos->estado }} </td>
+                                            <td> {{ $Usuarios->id }} </td>
+                                            <td> {{ $Usuarios->name }}</td>
+                                            <td> {{ $Usuarios->email }} </td>
+                                            <td> {{ $Usuarios->sexo }} </td>
+                                            <td> {{ $Usuarios->telefono }} </td>
+                                            <td> {{ $Usuarios->direccion }} </td>
                                         </tbody>
                                     @endforeach                              
                                     
