@@ -21,7 +21,7 @@ class libroController extends Controller
         $libro->anio = $request->anioLibro;
         $libro->edicion = $request->edicionLibro;
         $libro->numCopias = $request->numCopias;
-        $libro->timestamps();
+        //$libro->timestamps();
 
 
         $libro->save(); 
