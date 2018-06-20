@@ -33,6 +33,10 @@ Route::get('/home', function () {
   Route::delete('baja/admin/{id}','adminController@destroy');
     //Eliminar Alumnos
   Route::delete('baja/alumno/{id}','alumnoController@destroy');
+
+  //
+  Route::get('/prestamos','prestamoController@indexAdmin');
+
   
 
 
