@@ -5,7 +5,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Alumnos</h4>
+                                <h4 class="title">Administradores</h4>
                             </div>
                             
                             <div class="content table-responsive table-full-width">
@@ -30,8 +30,9 @@
                                             @endif  
                                             <td> {{ $Usuarios->telefono }} </td>
                                             <td> {{ $Usuarios->direccion }} </td>
+                                                                                         
                                             <td> 
-                                                <form action="{{'baja/alumno/'.$Usuarios->id}}" method="post">    
+                                                <form action="{{'baja/admin/'.$Usuarios->id}}" method="post">    
                                                     {{csrf_field()}}
                                                     {{ method_field('DELETE') }}
 

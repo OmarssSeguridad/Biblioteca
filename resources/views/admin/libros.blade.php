@@ -26,13 +26,13 @@
                                             <td> {{ $libros->anio }} </td>
                                             <td> {{ $libros->edicion }} </td>
                                             <td> {{ $libros->numCopias }} </td>
-                                            <td> 
+                                            <!--<td> 
                                                 <form action="" post="post">                          
                                                     {{csrf_field()}}
                                                     {{method_field('PUT')}}
                                                 <button type="submit"><i class="fa fa-edit"></i></button> 
                                                 </form>
-                                            </td>
+                                            </td>-->
 
                                             <td> 
                                                 <form action="{{'baja/libro/'.$libros->id}}" method="post">    

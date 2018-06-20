@@ -38,6 +38,7 @@ Route::get('/home', function () {
   Route::get('/prestamos','prestamoController@indexAdmin');
   Route::get('/libros','libroController@indexAdmin');
   Route::get('/usuarios', 'alumnoController@indexForAdmin');
+  Route::get('/administradores', 'adminController@indexForAdmin');
 
   
 

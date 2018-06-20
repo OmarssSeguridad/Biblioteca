@@ -95,7 +95,13 @@
                 <li>
                     <a href="{{ url('/admin/usuarios') }}">
                         <i class="ti-view-list-alt"></i>
-                        <p>Usuarios</p>
+                        <p>Alumnos</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url('/admin/administradores') }}">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Administradores</p>
                     </a>
                 </li>
             </ul>

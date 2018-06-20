@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Admin;
 class adminController extends Controller
 {
+    public function indexForAdmin(){
+        $Usuarios = Admin::all();
+        return view('admin.administradores',compact('Usuarios'));
+    }
     public function create()
     {
         return view('/admin/registrarAdmin'); 
@@ -48,7 +52,7 @@ class adminController extends Controller
         $admin = Admin::find($id);
         $admin->delete();
         session()->flash('message','Updated Successfully');
-        return redirect('/admin/usuarios');
+        return redirect('/admin/administradores');
     }
 
 }
